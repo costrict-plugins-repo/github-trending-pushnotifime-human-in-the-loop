@@ -1,0 +1,34 @@
+{
+  "name": "pushnotifi-me",
+  "description": "PushNotifi.me Claude Code plugins — human-in-the-loop approvals and operational alerts on your phone.",
+  "owner": {
+    "name": "PushNotifi",
+    "email": "support@pushnotifi.me"
+  },
+  "plugins": [
+    {
+      "name": "pushnotifi",
+      "source": "./",
+      "description": "Human-in-the-loop for AI agents on your phone. MCP server (pushnotifi_request_ack / pushnotifi_await_ack, send, list) plus skills and slash commands. Configure API credentials when you enable the plugin.",
+      "homepage": "https://pushnotifi.me",
+      "repository": "https://github.com/thetawavetechnologies/claude-plugin-pushnotifi",
+      "license": "MIT",
+      "keywords": [
+        "pushnotifi",
+        "human-in-the-loop",
+        "mcp",
+        "approvals",
+        "notifications",
+        "alerts"
+      ],
+      "category": "developer-tools",
+      "tags": [
+        "human-in-the-loop",
+        "approvals",
+        "agent-oversight",
+        "mcp",
+        "notifications"
+      ]
+    }
+  ]
+}

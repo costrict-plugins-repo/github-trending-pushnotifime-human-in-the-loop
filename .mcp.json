@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "pushnotifi": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/dist/server.js"],
+      "env": {
+        "NODE_PATH": "${CLAUDE_PLUGIN_DATA}/node_modules",
+        "PUSHNOTIFI_USER_KEY": "${user_config.user_key}",
+        "PUSHNOTIFI_GROUP_KEY": "${user_config.group_key}",
+        "PUSHNOTIFI_APPLICATION_KEY": "${user_config.application_key}",
+        "PUSHNOTIFI_API_BASE_URL": "${user_config.api_base_url}"
+      }
+    }
+  }
+}

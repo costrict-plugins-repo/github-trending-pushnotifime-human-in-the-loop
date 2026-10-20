@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "pushnotifi",
+  "version": "0.4.0",
+  "description": "Human-in-the-loop for AI agents on your phone. Bundles the PushNotifi MCP server (request_ack / await_ack, send, list) and skills for wiring operational alerts and approvals via PushNotifi.me.",
+  "author": {
+    "name": "PushNotifi",
+    "email": "support@pushnotifi.me"
+  },
+  "homepage": "https://pushnotifi.me",
+  "repository": "https://github.com/thetawavetechnologies/claude-plugin-pushnotifi",
+  "license": "MIT",
+  "keywords": [
+    "pushnotifi",
+    "human-in-the-loop",
+    "mcp",
+    "approvals",
+    "notifications",
+    "alerts"
+  ],
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
+  "userConfig": {
+    "user_key": {
+      "type": "string",
+      "title": "PushNotifi API key",
+      "description": "Your account API key (X-API-Key) from https://pushnotifi.me/dashboard",
+      "sensitive": true,
+      "required": true
+    },
+    "group_key": {
+      "type": "string",
+      "title": "Default group send_to_key",
+      "description": "Optional. Group g… key (32 chars) for send/list defaults and /pushnotifi:test. Leave empty if you only use MCP with explicit send_to_key per call.",
+      "required": false
+    },
+    "application_key": {
+      "type": "string",
+      "title": "Application key",
+      "description": "Optional. Omit to use the account default application.",
+      "required": false
+    },
+    "api_base_url": {
+      "type": "string",
+      "title": "API base URL",
+      "description": "Optional. Leave empty for https://api.pushnotifi.me",
+      "required": false
+    }
+  }
+}
